@@ -20,15 +20,25 @@ curl -v http://demo-service-imc-demo.apps.csppnq.lab.pnq2.cee.redhat.com/underto
 
 
 
-[cpandey@cpandey camel-twitter-shift]$ oc autoscale dc/fuse74-camel-twitter --min 1 --max 5 --cpu-percent=3
+[cpandey@cpandey camel-twitter-shift]$ oc autoscale dc/fuse74-camel-twitter --min 1 --max 5 --cpu-percent=10
+
 horizontalpodautoscaler.autoscaling/fuse74-camel-twitter autoscaled
 
 [cpandey@cpandey camel-twitter-shift]$ oc get hpa
+
 NAME                   REFERENCE                               TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
+
 fuse74-camel-twitter   DeploymentConfig/fuse74-camel-twitter   <unknown>/3%   1         5         0          4s
+
 [cpandey@cpandey camel-twitter-shift]$ 
 
 
-[cpandey@cpandey camel-twitter-shift]$ oc delete hpa fuse74-camel-twitter
-horizontalpodautoscaler.autoscaling "fuse74-camel-twitter" deleted
+[cpandey@cpandey ~]$ oc describe hpa fuse74-camel-twitter
 
+
+watch 'oc describe hpa fuse74-camel-twitter'
+
+
+[cpandey@cpandey camel-twitter-shift]$ oc delete hpa fuse74-camel-twitter
+
+horizontalpodautoscaler.autoscaling "fuse74-camel-twitter" deleted
