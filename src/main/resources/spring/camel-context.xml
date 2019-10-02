@@ -4,21 +4,21 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
     <!-- Define a traditional camel context here -->
     <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
-       <route id="twitter-timeline">
-            <from id="route-timeline" uri="twitter-timeline://home?type=polling&amp;delay=60000&amp;consumerKey=d1&amp;consumerSecret=Az&amp;accessToken=7d&amp;accessTokenSecret=9K"/>
+    <!--     <route id="twitter-timeline">
+            <from id="route-timeline" uri="twitter-timeline://home?type=polling&amp;delay=120000&amp;consumerKey=d1&amp;consumerSecret=Az&amp;accessToken=7d&amp;accessTokenSecret=9K"/>
             <log id="route-log-timeline" message=">>> ${body}"/>
-        </route>
+        </route> -->
         <route id="twitter-search">
-            <from id="route-search" uri="twitter-search://imcdemo?type=polling&amp;delay=60000&amp;consumerKey=d1&amp;consumerSecret=Az&amp;accessToken=7d&amp;accessTokenSecret=9K"/>
+            <from id="route-search" uri="twitter-search://imcdemo?type=polling&amp;delay=120000&amp;consumerKey=dFhJfXLS1obcf6Cknfn71zxK1&amp;consumerSecret=As7g0FrdhsHH0r63kTj2XUZmfXky0ka0ryv4QKkhAeyDkXaeLz&amp;accessToken=71749537-0Fhbty5NnlUqWyj15ptFNV1qB1KtI615viLbGQehd&amp;accessTokenSecret=9wQqlsv3BmixQ5AH6hpzirbdinQ9Cir56ZsTLDVGIlyVK"/>
             <log id="route-log-search" message=">>> ${body}"/>
         </route>
-        
         <route id="load-route">
-            <from uri="undertow:http://0.0.0.0:9956/undertowTest" />
-            <convertBodyTo type="java.lang.String"/>
-            <log message="\n REQUEST RECEIVED :\n Headers: ${headers}\n Body: ${body} \n" loggingLevel="INFO"/>
-            <setBody><constant>hello all</constant></setBody>
+            <from id="_from1" uri="undertow:http://0.0.0.0:9956/undertowTest"/>
+            <convertBodyTo id="_convertBodyTo1" type="java.lang.String"/>
+            <log id="_log1" loggingLevel="INFO" message="\n REQUEST RECEIVED :\n Headers: ${headers}\n Body: ${body} \n"/>
+            <setBody id="_setBody1">
+                <constant>hello all</constant>
+            </setBody>
         </route>
-        
     </camelContext>
 </beans>
