@@ -9,7 +9,7 @@
             <log id="route-log-timeline" message=">>> ${body}"/>
         </route> -->
         <route id="twitter-search">
-             <from id="route-search" uri="twitter-search://imcdemo OR RED_HAT_APAC OR RedHatTelco?type=polling&amp;delay=120000&amp;consumerKey=dF&amp;consumerSecret=Ay&amp;accessToken=7d&amp;accessTokenSecret=9K"/>
+             <from id="route-search" uri="twitter-search://imcdemo OR RED_HAT_APAC OR RedHatTelco?type=polling&amp;delay=120000&amp;consumerKey=NMqaca1bzXsOcZhP2XlwA&amp;consumerSecret=VxNQiRLwwKVD0K9mmfxlTTbVdgRpriORypnUbHhxeQw&amp;accessToken=26693234-W0YjxL9cMJrC0VZZ4xdgFMymxIQ10LeL1K8YlbBY&amp;accessTokenSecret=BZD51BgzbOdFstWZYsqB5p5dbuuDV12vrOdatzhY4E"/>
             <log id="route-log-search" message=">>> ${body}"/>
         </route>
         <route id="load-route">
