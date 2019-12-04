@@ -9,7 +9,7 @@
             <log id="route-log-timeline" message=">>> ${body}"/>
         </route> -->
         <route id="twitter-search">
-             <from id="route-search" uri="twitter-search://camelTest OR RED_HAT_APAC OR RedHatTelco?type=polling&amp;delay=120000&amp;consumerKey=NMqaca1bzXsOcZhP2XlwA&amp;consumerSecret=VxNQiRLwwKVD0K9mmfxlTTbVdgRpriORypnUbHhxeQw&amp;accessToken=26693234-W0YjxL9cMJrC0VZZ4xdgFMymxIQ10LeL1K8YlbBY&amp;accessTokenSecret=BZD51BgzbOdFstWZYsqB5p5dbuuDV12vrOdatzhY4E"/>
+            <from id="route-search" uri="twitter-search://imcdemo?type=polling&amp;delay=120000&amp;consumerKey=dFhJfXLS1obcf6Cknfn71zxK1&amp;consumerSecret=As7g0FrdhsHH0r63kTj2XUZmfXky0ka0ryv4QKkhAeyDkXaeLz&amp;accessToken=71749537-0Fhbty5NnlUqWyj15ptFNV1qB1KtI615viLbGQehd&amp;accessTokenSecret=9wQqlsv3BmixQ5AH6hpzirbdinQ9Cir56ZsTLDVGIlyVK"/>
             <log id="route-log-search" message=">>> ${body}"/>
         </route>
         <route id="load-route">
